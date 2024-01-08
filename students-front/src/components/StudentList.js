@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
-import NewStudentModal from "./NewStudentModal";
-
-import ConfirmRemovalModal from "./ConfirmRemovalModal";
 
 class StudentList extends Component {
   render() {
@@ -34,18 +31,6 @@ class StudentList extends Component {
                 <td>{student.document}</td>
                 <td>{student.phone}</td>
                 <td>{student.registrationDate}</td>
-                <td align="center">
-                  <NewStudentModal
-                    create={false}
-                    student={student}
-                    resetState={this.props.resetState}
-                  />
-                  &nbsp;&nbsp;
-                  <ConfirmRemovalModal
-                    pk={student.pk}
-                    resetState={this.props.resetState}
-                  />
-                </td>
               </tr>
             ))
           )}

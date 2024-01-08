@@ -1,10 +1,18 @@
+import React, { Component, Fragment } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
+import Header from "./components/Header";
+import Home from "./components/Home";
 
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <Header />
+        <Home />
+      </Fragment>
+    );
+  }
 }
 
 export default App;
